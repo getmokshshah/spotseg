@@ -28,8 +28,8 @@ import time
 import numpy as np
 from PIL import Image
 
-from models import ObjectSegmentor
-from utils import (
+from seg_models import ObjectSegmentor
+from seg_utils import (
     create_highlight_overlay,
     create_blur_background,
     create_detection_visualization,
