@@ -216,9 +216,10 @@ with gr.Blocks(
     if example_images:
         gr.Examples(
             examples=[
-                [example_images[0], "car", "Highlight Object", "#4fd1c5", 0.35],
+                [example_images[2], "dog", "Highlight Object", "#4fd1c5", 0.30],
                 [example_images[1], "person", "Blur Background", "#f6ad55", 0.35],
-                [example_images[2], "dog", "Highlight Object", "#68d391", 0.30],
+                [example_images[2], "dog", "Contour Outline", "#b794f4", 0.30],
+                [example_images[0], "", "Auto-Detect All", "#4fd1c5", 0.30],
             ],
             inputs=[input_image, text_query, mode, highlight_color, threshold],
             outputs=[output_image, stats_text, objects_text],
