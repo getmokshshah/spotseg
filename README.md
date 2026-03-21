@@ -1,8 +1,8 @@
 ---
 title: SpotSeg
 emoji: 🎯
-colorFrom: teal
-colorTo: orange
+colorFrom: green
+colorTo: yellow
 sdk: gradio
 sdk_version: "5.23.0"
 python_version: "3.10"
