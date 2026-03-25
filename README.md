@@ -27,7 +27,7 @@ SpotSeg combines two powerful vision models into a single tool:
 
 2. **Auto-Detect Mode** — YOLOv8 scans the entire image and draws labeled bounding boxes around every recognized object with confidence scores.
 
-Both modes run entirely on CPU, making the tool deployable on free-tier cloud infrastructure.
+Both modes are optimized to run in resource-constrained environments, making the tool deployable on free-tier cloud infrastructure.
 
 ## 📁 Project Structure
 
@@ -87,8 +87,8 @@ python inference.py --input photo.jpg --output mask.npy --query "dog" --save-raw
 
 ## Models
 
-| Model | Task | Speed (CPU) | Memory | Source |
-|-------|------|-------------|--------|--------|
+| Model | Task | Speed (resource-constrained) | Memory | Source |
+|-------|------|------------------------------|--------|--------|
 | CLIPSeg (`clipseg-rd64-refined`) | Text-guided segmentation | ~1.5s/image | ~600MB | CIDAS / HuggingFace |
 | YOLOv8n | Object detection (80 classes) | ~0.3s/image | ~50MB | Ultralytics |
 
@@ -128,7 +128,7 @@ For Auto-Detect mode, YOLOv8 Nano uses a **CSPDarknet** backbone with a **PANet*
 
 ## Performance
 
-Benchmarked on a 2-core CPU (HuggingFace Spaces free tier):
+Benchmarked in a resource-constrained environment (2-core, no GPU):
 
 | Task | Resolution | Inference Time | Peak RAM |
 |------|-----------|---------------|----------|
